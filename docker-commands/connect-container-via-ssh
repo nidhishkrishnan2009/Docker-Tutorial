@@ -1,0 +1,5 @@
+Steps:
+1. docker pull jdeathe/centos-ssh
+2. ssh private key is downloaded and present inside "ssh-keys" folder.
+3. get ip address using: docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container-id>
+4. ssh -i /home/nidhishkrishnan/Documents/Docker-Tutorial/ssh-keys/id_rsa_insecure  app-admin@172.17.0.2

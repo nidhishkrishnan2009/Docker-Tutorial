@@ -1,0 +1,17 @@
+start docker service:
+systemctl start docker
+
+List containers:
+docker ps -a
+
+docker start a container:
+docker run --name centos1 -it jdeathe/centos-ssh
+
+Remove a container:
+docker rm <container-id>
+
+To login into the container:
+docker exec -it <container-id> /bin/bash
+
+find ip of a running container:
+docker inspect -f '{{range.NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <container-id>
